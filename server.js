@@ -9,12 +9,12 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
 app.get('/notes', (req, res) => {
-  console.log('Hello')
+  // console.log('Hello')
   res.sendFile(join(__dirname, 'public/notes.html'))
 })
 
 app.get('/api/notes', (req, res) => {
-  console.log('notes')
+  // console.log('notes')
   return res.status(200).json(database)
 })
 
@@ -27,7 +27,9 @@ app.post('/api/notes', (req, res) => {
 })
 
 app.delete('/api/notes/:id', (req, res) => {
-  const id = req.params.id
+  let id = req.params.id
+  console.log(id)
+
 })
 
 app.get('*', (req,res) => {
