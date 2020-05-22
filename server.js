@@ -6,6 +6,6 @@ app.use(express.static(join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
-app.use(require('./routes/noteRoutes.js'))
+
 
 app.listen(3000, () => console.log('http://localhost:3000'))
